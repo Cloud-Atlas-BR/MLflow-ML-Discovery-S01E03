@@ -1,0 +1,1092 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "m-lflow": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "m-lflow.template.json"
+      },
+      "metadata": {
+        "/m-lflow": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "repositoryName": "mlflow-containers",
+              "imageTag": "08c3c00a5263e13c4c3abcb3c98a9ea90e975a33cde5c7f992a18f39bd85573a",
+              "id": "08c3c00a5263e13c4c3abcb3c98a9ea90e975a33cde5c7f992a18f39bd85573a",
+              "packaging": "container-image",
+              "path": "asset.08c3c00a5263e13c4c3abcb3c98a9ea90e975a33cde5c7f992a18f39bd85573a",
+              "sourceHash": "08c3c00a5263e13c4c3abcb3c98a9ea90e975a33cde5c7f992a18f39bd85573a"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:399:62)",
+              "LegacyStackSynthesizer.doAddDockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:150:29)",
+              "LegacyStackSynthesizer.addDockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:105:25)",
+              "Stack.addDockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\stack.js:411:33)",
+              "LegacyStackSynthesizer.addDockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:109:31)",
+              "new DockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecr-assets\\lib\\image-asset.js:92:44)",
+              "AssetImage.bind (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\asset-image.js:31:23)",
+              "new ContainerDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:108:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:219:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/mlflowStack": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mlflowStack",
+            "trace": [
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/TASKROLE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TASKROLEA2089027",
+            "trace": [
+              "new Role (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/dbsecret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbsecretA10F65F5",
+            "trace": [
+              "new Secret (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-secretsmanager\\lib\\secret.js:195:26)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/mlflowstacktrack/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mlflowstacktrackABA60F4E",
+            "trace": [
+              "new Bucket (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:521:26)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/dev_vpc": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "fromVpcAttributes: 'availabilityZones' is a list token: the imported VPC will not work with constructs that require a list of subnets at synthesis time. Use 'Vpc.fromLookup()' or 'Fn.importListValue' instead.",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:94:42)",
+              "Annotations.addWarning (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:37:14)",
+              "new ImportedVpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:899:45)",
+              "Function.fromVpcAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:433:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:114",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:87",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.sinvoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/dev_vpc/PrivateSubnet1": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "No routeTableId was provided to the subnet 'subnet-d1d00ee0'. Attempting to read its .routeTable.routeTableId will return null/undefined. (More info: https://github.com/aws/aws-cdk/pull/3171)",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:94:42)",
+              "Annotations.addWarning (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:37:14)",
+              "new ImportedSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:1019:41)",
+              "Function.fromSubnetAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:704:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:61:33",
+              "Array.map (<anonymous>)",
+              "ImportSubnetGroup.import (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:59:45)",
+              "new ImportedVpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:908:42)",
+              "Function.fromVpcAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:433:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:114",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:87",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.sinvoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/dev_vpc/undefinedSubnet2": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "No routeTableId was provided to the subnet 'subnet-a3e77682'. Attempting to read its .routeTable.routeTableId will return null/undefined. (More info: https://github.com/aws/aws-cdk/pull/3171)",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:94:42)",
+              "Annotations.addWarning (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:37:14)",
+              "new ImportedSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:1019:41)",
+              "Function.fromSubnetAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:704:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:61:33",
+              "Array.map (<anonymous>)",
+              "ImportSubnetGroup.import (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:59:45)",
+              "new ImportedVpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:908:42)",
+              "Function.fromVpcAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:433:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:114",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:87",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.sinvoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/dev_vpc/undefinedSubnet3": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "No routeTableId was provided to the subnet 'subnet-f01d9696'. Attempting to read its .routeTable.routeTableId will return null/undefined. (More info: https://github.com/aws/aws-cdk/pull/3171)",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:94:42)",
+              "Annotations.addWarning (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:37:14)",
+              "new ImportedSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:1019:41)",
+              "Function.fromSubnetAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:704:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:61:33",
+              "Array.map (<anonymous>)",
+              "ImportSubnetGroup.import (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\util.js:59:45)",
+              "new ImportedVpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:908:42)",
+              "Function.fromVpcAttributes (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:433:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:114",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:87",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.sinvoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2557:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/SGRDS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SGRDS8D02E925",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:207:30)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MYSQL/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MYSQLSubnetGroup5B5FBC17",
+            "trace": [
+              "new SubnetGroup (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-rds\\lib\\subnet-group.js:24:29)",
+              "new DatabaseInstanceNew (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-rds\\lib\\instance.js:155:87)",
+              "new DatabaseInstanceSource (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-rds\\lib\\instance.js:251:9)",
+              "new DatabaseInstance (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-rds\\lib\\instance.js:353:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MYSQL/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MYSQLDA998D0F",
+            "trace": [
+              "new DatabaseInstance (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-rds\\lib\\instance.js:356:26)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERCDDEBBE4",
+            "trace": [
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:68:25)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpc94F1BA6C",
+            "trace": [
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:343:25)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1Subnet8D402379",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:667:24)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1RouteTableCFBE6E8C",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:683:23)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1RouteTableAssociation7450DAB2",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:688:9)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1DefaultRoute341AB264",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:723:23)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:375:32)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1EIP55A04F5A",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:852:27)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:74:33)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet1NATGatewayA7C22915",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:850:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:74:33)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2Subnet5DCFC29E",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:667:24)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2RouteTable5C88D408",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:683:23)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2RouteTableAssociation1731CC61",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:688:9)",
+              "new PublicSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:832:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:565:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2DefaultRouteE183A882",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:723:23)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:376:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:375:32)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2EIPA419AB33",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:852:27)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:74:33)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPublicSubnet2NATGatewayDD0167D9",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:850:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:74:33)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet1SubnetFE921FB1",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:667:24)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet1RouteTableBFFAC205",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:683:23)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet1RouteTableAssociation195E13E6",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:688:9)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet1DefaultRouteC5FC1D1F",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:770:23)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:85:16)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:79:18)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet2SubnetA2222ECD",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:667:24)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet2RouteTable47038F19",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:683:23)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet2RouteTableAssociationFEA74074",
+            "trace": [
+              "new Subnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:688:9)",
+              "new PrivateSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:872:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:570:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:549:32)",
+              "Vpc.createSubnets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:545:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:364:14)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcPrivateSubnet2DefaultRoute4E069449",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:770:23)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:85:16)",
+              "NatGatewayProvider.configureNat (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.js:79:18)",
+              "Vpc.createNatGateways (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:523:18)",
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:381:22)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcIGW19A53A62",
+            "trace": [
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:368:25)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CLUSTER/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CLUSTERVpcVPCGWF0005E05",
+            "trace": [
+              "new Vpc (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.js:371:25)",
+              "new Cluster (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.js:79:33)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLflow/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLflowDDA9BA68",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:82:25)",
+              "new FargateTaskDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.js:25:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLflow/Container/AssetImage": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "DockerImageAsset.repositoryName is deprecated. Override \"core.Stack.addDockerImageAsset\" to control asset locations",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:94:42)",
+              "Annotations.addWarning (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\annotations.js:37:14)",
+              "new DockerImageAsset (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecr-assets\\lib\\image-asset.js:58:41)",
+              "AssetImage.bind (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\asset-image.js:31:23)",
+              "new ContainerDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:108:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:219:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLflow/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLflowExecutionRoleB8ECF96D",
+            "trace": [
+              "new Role (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "FargateTaskDefinition.obtainExecutionRole (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:283:35)",
+              "AssetImage.bind (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\asset-image.js:35:71)",
+              "new ContainerDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:108:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:219:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLflow/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLflowExecutionRoleDefaultPolicy23CB19EA",
+            "trace": [
+              "new Policy (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:56:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:205:34)",
+              "Function.addToPrincipal (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:90:65)",
+              "Function.addToPrincipalOrResource (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:45:30)",
+              "Import.grant (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:153:26)",
+              "Import.grantPull (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecr\\lib\\repository.js:167:26)",
+              "AssetImage.bind (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\asset-image.js:35:26)",
+              "new ContainerDefinition (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.js:108:40)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.js:219:16)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWLB7B85C32A",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.js:35:26)",
+              "new NetworkLoadBalancer (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\nlb\\network-load-balancer.js:25:9)",
+              "new NetworkLoadBalancedServiceBase (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\network-load-balanced-service-base.js:53:89)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWLBPublicListener92B8F85A",
+            "trace": [
+              "new BaseListener (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.js:21:26)",
+              "new NetworkListener (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\nlb\\network-listener.js:33:9)",
+              "NetworkLoadBalancer.addListener (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\nlb\\network-load-balancer.js:84:16)",
+              "new NetworkLoadBalancedServiceBase (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\network-load-balanced-service-base.js:58:38)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWLBPublicListenerECSGroupFAEEFBE6",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.js:44:25)",
+              "new NetworkTargetGroup (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\nlb\\network-target-group.js:24:9)",
+              "NetworkListener.addTargets (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\nlb\\network-listener.js:147:23)",
+              "new NetworkLoadBalancedServiceBase (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\network-load-balanced-service-base.js:59:42)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWLoadBalancerDNSAEFB7E43",
+            "trace": [
+              "new NetworkLoadBalancedServiceBase (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\network-load-balanced-service-base.js:88:13)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:22:9)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWServiceFC39EF8E",
+            "trace": [
+              "new BaseService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:137:25)",
+              "new FargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:38:9)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:57:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWServiceSecurityGroup224B1FDD",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.js:207:30)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:418:31)",
+              "new FargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.js:57:14)",
+              "new NetworkLoadBalancedFargateService (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\network-load-balanced-fargate-service.js:57:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/Service/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWServiceTaskCountTarget5798B92F",
+            "trace": [
+              "new ScalableTarget (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-applicationautoscaling\\lib\\scalable-target.js:41:26)",
+              "new BaseScalableAttribute (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-applicationautoscaling\\lib\\base-scalable-attribute.js:34:23)",
+              "new ScalableTaskCount (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\scalable-task-count.js:19:9)",
+              "FargateService.autoScaleTaskCount (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.js:290:41)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/MLFLOW/Service/TaskCount/Target/AUTOSCALING/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MLFLOWServiceTaskCountTargetAUTOSCALINGE4A5776E",
+            "trace": [
+              "new TargetTrackingScalingPolicy (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-applicationautoscaling\\lib\\target-tracking-scaling-policy.js:26:26)",
+              "ScalableTarget.scaleToTrackMetric (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-applicationautoscaling\\lib\\scalable-target.js:106:16)",
+              "ScalableTaskCount.doScaleToTrackMetric (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-applicationautoscaling\\lib\\base-scalable-attribute.js:65:21)",
+              "ScalableTaskCount.scaleOnCpuUtilization (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\scalable-task-count.js:43:22)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoadBalancerDNS",
+            "trace": [
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/m-lflow/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:9",
+              "visit (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:184:9)",
+              "visit (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:181:9)",
+              "injectMetadataResources (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:117:5)",
+              "Object.synthesize (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\VAIO\\AppData\\Local\\Temp\\jsii-kernel-OPS6yn\\node_modules\\@aws-cdk\\core\\lib\\stage.js:100:41)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3148:24)",
+              "C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\VAIO\\AppData\\Local\\Temp\\tmpo_3vr0bw\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

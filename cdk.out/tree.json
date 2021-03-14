@@ -1,0 +1,1627 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.92.0"
+        }
+      },
+      "m-lflow": {
+        "id": "m-lflow",
+        "path": "m-lflow",
+        "children": {
+          "mlflowStack": {
+            "id": "mlflowStack",
+            "path": "m-lflow/mlflowStack",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnParameter",
+              "version": "1.92.0"
+            }
+          },
+          "TASKROLE": {
+            "id": "TASKROLE",
+            "path": "m-lflow/TASKROLE",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/TASKROLE/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "ecs-tasks.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":iam::aws:policy/AmazonS3FullAccess"
+                          ]
+                        ]
+                      },
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":iam::aws:policy/AmazonECS_FullAccess"
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.92.0"
+            }
+          },
+          "dbsecret": {
+            "id": "dbsecret",
+            "path": "m-lflow/dbsecret",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/dbsecret/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SecretsManager::Secret",
+                  "aws:cdk:cloudformation:props": {
+                    "generateSecretString": {
+                      "excludePunctuation": true,
+                      "passwordLength": 20
+                    },
+                    "name": "dbPassword"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-secretsmanager.CfnSecret",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-secretsmanager.Secret",
+              "version": "1.92.0"
+            }
+          },
+          "mlflowstacktrack": {
+            "id": "mlflowstacktrack",
+            "path": "m-lflow/mlflowstacktrack",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/mlflowstacktrack/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketName": "mlflowbucket-track-stack",
+                    "publicAccessBlockConfiguration": {
+                      "blockPublicAcls": true,
+                      "blockPublicPolicy": true,
+                      "ignorePublicAcls": true,
+                      "restrictPublicBuckets": true
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                  "version": "1.92.0"
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "m-lflow/mlflowstacktrack/Notifications",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-s3.Bucket",
+              "version": "1.92.0"
+            }
+          },
+          "dev_vpc": {
+            "id": "dev_vpc",
+            "path": "m-lflow/dev_vpc",
+            "children": {
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "m-lflow/dev_vpc/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.92.0"
+                }
+              },
+              "undefinedSubnet2": {
+                "id": "undefinedSubnet2",
+                "path": "m-lflow/dev_vpc/undefinedSubnet2",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.92.0"
+                }
+              },
+              "undefinedSubnet3": {
+                "id": "undefinedSubnet3",
+                "path": "m-lflow/dev_vpc/undefinedSubnet3",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.92.0"
+            }
+          },
+          "SGRDS": {
+            "id": "SGRDS",
+            "path": "m-lflow/SGRDS",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/SGRDS/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "groupDescription": "m-lflow/SGRDS",
+                    "groupName": "sg_rds",
+                    "securityGroupEgress": [
+                      {
+                        "cidrIp": "0.0.0.0/0",
+                        "description": "Allow all outbound traffic by default",
+                        "ipProtocol": "-1"
+                      }
+                    ],
+                    "securityGroupIngress": [
+                      {
+                        "cidrIp": "0.0.0.0/0",
+                        "ipProtocol": "tcp",
+                        "fromPort": 3306,
+                        "toPort": 3306,
+                        "description": "from 0.0.0.0/0:3306"
+                      }
+                    ],
+                    "vpcId": "vpc-c77ed9ba"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+              "version": "1.92.0"
+            }
+          },
+          "MYSQL": {
+            "id": "MYSQL",
+            "path": "m-lflow/MYSQL",
+            "children": {
+              "SubnetGroup": {
+                "id": "SubnetGroup",
+                "path": "m-lflow/MYSQL/SubnetGroup",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "m-lflow/MYSQL/SubnetGroup/Default",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::RDS::DBSubnetGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "dbSubnetGroupDescription": "Subnet group for MYSQL database",
+                        "subnetIds": [
+                          "subnet-d1d00ee0",
+                          "subnet-a3e77682",
+                          "subnet-f01d9696"
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-rds.CfnDBSubnetGroup",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-rds.SubnetGroup",
+                  "version": "1.92.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/MYSQL/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::RDS::DBInstance",
+                  "aws:cdk:cloudformation:props": {
+                    "dbInstanceClass": "db.t2.small",
+                    "allocatedStorage": "100",
+                    "copyTagsToSnapshot": true,
+                    "dbName": "mlflowdb",
+                    "dbSubnetGroupName": {
+                      "Ref": "MYSQLSubnetGroup5B5FBC17"
+                    },
+                    "deletionProtection": false,
+                    "engine": "mysql",
+                    "engineVersion": "8.0.19",
+                    "masterUsername": "master",
+                    "masterUserPassword": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{{resolve:secretsmanager:",
+                          {
+                            "Ref": "dbsecretA10F65F5"
+                          },
+                          ":SecretString:::}}"
+                        ]
+                      ]
+                    },
+                    "port": "3306",
+                    "storageType": "gp2",
+                    "vpcSecurityGroups": [
+                      {
+                        "Fn::GetAtt": [
+                          "SGRDS8D02E925",
+                          "GroupId"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-rds.CfnDBInstance",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-rds.DatabaseInstance",
+              "version": "1.92.0"
+            }
+          },
+          "CLUSTER": {
+            "id": "CLUSTER",
+            "path": "m-lflow/CLUSTER",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/CLUSTER/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                  "aws:cdk:cloudformation:props": {
+                    "clusterName": "mlflow"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.CfnCluster",
+                  "version": "1.92.0"
+                }
+              },
+              "Vpc": {
+                "id": "Vpc",
+                "path": "m-lflow/CLUSTER/Vpc",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "m-lflow/CLUSTER/Vpc/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "instanceTenancy": "default",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "m-lflow/CLUSTER/Vpc"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PublicSubnet1": {
+                    "id": "PublicSubnet1",
+                    "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.0.0/18",
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPublicSubnet1RouteTableCFBE6E8C"
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPublicSubnet1Subnet8D402379"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPublicSubnet1RouteTableCFBE6E8C"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "CLUSTERVpcIGW19A53A62"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "EIP": {
+                        "id": "EIP",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/EIP",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                          "aws:cdk:cloudformation:props": {
+                            "domain": "vpc",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnEIP",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "NATGateway": {
+                        "id": "NATGateway",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet1/NATGateway",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                          "aws:cdk:cloudformation:props": {
+                            "allocationId": {
+                              "Fn::GetAtt": [
+                                "CLUSTERVpcPublicSubnet1EIP55A04F5A",
+                                "AllocationId"
+                              ]
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPublicSubnet1Subnet8D402379"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnNatGateway",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PublicSubnet2": {
+                    "id": "PublicSubnet2",
+                    "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.64.0/18",
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPublicSubnet2RouteTable5C88D408"
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPublicSubnet2Subnet5DCFC29E"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPublicSubnet2RouteTable5C88D408"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "CLUSTERVpcIGW19A53A62"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "EIP": {
+                        "id": "EIP",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/EIP",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                          "aws:cdk:cloudformation:props": {
+                            "domain": "vpc",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnEIP",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "NATGateway": {
+                        "id": "NATGateway",
+                        "path": "m-lflow/CLUSTER/Vpc/PublicSubnet2/NATGateway",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                          "aws:cdk:cloudformation:props": {
+                            "allocationId": {
+                              "Fn::GetAtt": [
+                                "CLUSTERVpcPublicSubnet2EIPA419AB33",
+                                "AllocationId"
+                              ]
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPublicSubnet2Subnet5DCFC29E"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PublicSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnNatGateway",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PrivateSubnet1": {
+                    "id": "PrivateSubnet1",
+                    "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.128.0/18",
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PrivateSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PrivateSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet1RouteTableBFFAC205"
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet1SubnetFE921FB1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet1RouteTableBFFAC205"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "natGatewayId": {
+                              "Ref": "CLUSTERVpcPublicSubnet1NATGatewayA7C22915"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PrivateSubnet2": {
+                    "id": "PrivateSubnet2",
+                    "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.192.0/18",
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PrivateSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "m-lflow/CLUSTER/Vpc/PrivateSubnet2"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet2RouteTable47038F19"
+                            },
+                            "subnetId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet2SubnetA2222ECD"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "m-lflow/CLUSTER/Vpc/PrivateSubnet2/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "CLUSTERVpcPrivateSubnet2RouteTable47038F19"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "natGatewayId": {
+                              "Ref": "CLUSTERVpcPublicSubnet2NATGatewayDD0167D9"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "IGW": {
+                    "id": "IGW",
+                    "path": "m-lflow/CLUSTER/Vpc/IGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "m-lflow/CLUSTER/Vpc"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "VPCGW": {
+                    "id": "VPCGW",
+                    "path": "m-lflow/CLUSTER/Vpc/VPCGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "CLUSTERVpc94F1BA6C"
+                        },
+                        "internetGatewayId": {
+                          "Ref": "CLUSTERVpcIGW19A53A62"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.Vpc",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs.Cluster",
+              "version": "1.92.0"
+            }
+          },
+          "MLflow": {
+            "id": "MLflow",
+            "path": "m-lflow/MLflow",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "m-lflow/MLflow/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                  "aws:cdk:cloudformation:props": {
+                    "containerDefinitions": [
+                      {
+                        "essential": true,
+                        "image": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              {
+                                "Ref": "AWS::AccountId"
+                              },
+                              ".dkr.ecr.us-east-1.",
+                              {
+                                "Ref": "AWS::URLSuffix"
+                              },
+                              "/mlflow-containers:08c3c00a5263e13c4c3abcb3c98a9ea90e975a33cde5c7f992a18f39bd85573a"
+                            ]
+                          ]
+                        },
+                        "name": "Container",
+                        "portMappings": [
+                          {
+                            "containerPort": 5000,
+                            "hostPort": 5000,
+                            "protocol": "tcp"
+                          }
+                        ],
+                        "environment": [
+                          {
+                            "name": "BUCKET",
+                            "value": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "s3://",
+                                  {
+                                    "Ref": "mlflowstacktrackABA60F4E"
+                                  }
+                                ]
+                              ]
+                            }
+                          },
+                          {
+                            "name": "HOST",
+                            "value": {
+                              "Fn::GetAtt": [
+                                "MYSQLDA998D0F",
+                                "Endpoint.Address"
+                              ]
+                            }
+                          },
+                          {
+                            "name": "PORT",
+                            "value": "3306"
+                          },
+                          {
+                            "name": "DATABASE",
+                            "value": "mlflowdb"
+                          },
+                          {
+                            "name": "USERNAME",
+                            "value": "master"
+                          }
+                        ],
+                        "secrets": [
+                          {
+                            "name": "PASSWORD",
+                            "valueFrom": {
+                              "Ref": "dbsecretA10F65F5"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "cpu": "256",
+                    "executionRoleArn": {
+                      "Fn::GetAtt": [
+                        "MLflowExecutionRoleB8ECF96D",
+                        "Arn"
+                      ]
+                    },
+                    "family": "mlflowMLflow0D7A968F",
+                    "memory": "512",
+                    "networkMode": "awsvpc",
+                    "requiresCompatibilities": [
+                      "FARGATE"
+                    ],
+                    "taskRoleArn": {
+                      "Fn::GetAtt": [
+                        "TASKROLEA2089027",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.CfnTaskDefinition",
+                  "version": "1.92.0"
+                }
+              },
+              "Container": {
+                "id": "Container",
+                "path": "m-lflow/MLflow/Container",
+                "children": {
+                  "AssetImage": {
+                    "id": "AssetImage",
+                    "path": "m-lflow/MLflow/Container/AssetImage",
+                    "children": {
+                      "Staging": {
+                        "id": "Staging",
+                        "path": "m-lflow/MLflow/Container/AssetImage/Staging",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/assets.Staging",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Repository": {
+                        "id": "Repository",
+                        "path": "m-lflow/MLflow/Container/AssetImage/Repository",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ecr.RepositoryBase",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecr-assets.DockerImageAsset",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.ContainerDefinition",
+                  "version": "1.92.0"
+                }
+              },
+              "ExecutionRole": {
+                "id": "ExecutionRole",
+                "path": "m-lflow/MLflow/ExecutionRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "m-lflow/MLflow/ExecutionRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "ecs-tasks.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "m-lflow/MLflow/ExecutionRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "m-lflow/MLflow/ExecutionRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "ecr:BatchCheckLayerAvailability",
+                                    "ecr:GetDownloadUrlForLayer",
+                                    "ecr:BatchGetImage"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":ecr:us-east-1:",
+                                        {
+                                          "Ref": "AWS::AccountId"
+                                        },
+                                        ":repository/mlflow-containers"
+                                      ]
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": "ecr:GetAuthorizationToken",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                },
+                                {
+                                  "Action": [
+                                    "secretsmanager:GetSecretValue",
+                                    "secretsmanager:DescribeSecret"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Ref": "dbsecretA10F65F5"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "MLflowExecutionRoleDefaultPolicy23CB19EA",
+                            "roles": [
+                              {
+                                "Ref": "MLflowExecutionRoleB8ECF96D"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs.FargateTaskDefinition",
+              "version": "1.92.0"
+            }
+          },
+          "MLFLOW": {
+            "id": "MLFLOW",
+            "path": "m-lflow/MLFLOW",
+            "children": {
+              "LB": {
+                "id": "LB",
+                "path": "m-lflow/MLFLOW/LB",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "m-lflow/MLFLOW/LB/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                      "aws:cdk:cloudformation:props": {
+                        "loadBalancerAttributes": [
+                          {
+                            "key": "deletion_protection.enabled",
+                            "value": "false"
+                          }
+                        ],
+                        "scheme": "internet-facing",
+                        "subnets": [
+                          {
+                            "Ref": "CLUSTERVpcPublicSubnet1Subnet8D402379"
+                          },
+                          {
+                            "Ref": "CLUSTERVpcPublicSubnet2Subnet5DCFC29E"
+                          }
+                        ],
+                        "type": "network"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnLoadBalancer",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PublicListener": {
+                    "id": "PublicListener",
+                    "path": "m-lflow/MLFLOW/LB/PublicListener",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "m-lflow/MLFLOW/LB/PublicListener/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                          "aws:cdk:cloudformation:props": {
+                            "defaultActions": [
+                              {
+                                "type": "forward",
+                                "targetGroupArn": {
+                                  "Ref": "MLFLOWLBPublicListenerECSGroupFAEEFBE6"
+                                }
+                              }
+                            ],
+                            "loadBalancerArn": {
+                              "Ref": "MLFLOWLB7B85C32A"
+                            },
+                            "port": 80,
+                            "protocol": "TCP"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnListener",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "ECSGroup": {
+                        "id": "ECSGroup",
+                        "path": "m-lflow/MLFLOW/LB/PublicListener/ECSGroup",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "m-lflow/MLFLOW/LB/PublicListener/ECSGroup/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                              "aws:cdk:cloudformation:props": {
+                                "port": 80,
+                                "protocol": "TCP",
+                                "targetType": "ip",
+                                "vpcId": {
+                                  "Ref": "CLUSTERVpc94F1BA6C"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnTargetGroup",
+                              "version": "1.92.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-elasticloadbalancingv2.NetworkTargetGroup",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.NetworkListener",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer",
+                  "version": "1.92.0"
+                }
+              },
+              "LoadBalancerDNS": {
+                "id": "LoadBalancerDNS",
+                "path": "m-lflow/MLFLOW/LoadBalancerDNS",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.92.0"
+                }
+              },
+              "Service": {
+                "id": "Service",
+                "path": "m-lflow/MLFLOW/Service",
+                "children": {
+                  "Service": {
+                    "id": "Service",
+                    "path": "m-lflow/MLFLOW/Service/Service",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                      "aws:cdk:cloudformation:props": {
+                        "cluster": {
+                          "Ref": "CLUSTERCDDEBBE4"
+                        },
+                        "deploymentConfiguration": {
+                          "maximumPercent": 200,
+                          "minimumHealthyPercent": 50
+                        },
+                        "desiredCount": 1,
+                        "enableEcsManagedTags": false,
+                        "healthCheckGracePeriodSeconds": 60,
+                        "launchType": "FARGATE",
+                        "loadBalancers": [
+                          {
+                            "targetGroupArn": {
+                              "Ref": "MLFLOWLBPublicListenerECSGroupFAEEFBE6"
+                            },
+                            "containerName": "Container",
+                            "containerPort": 5000
+                          }
+                        ],
+                        "networkConfiguration": {
+                          "awsvpcConfiguration": {
+                            "assignPublicIp": "DISABLED",
+                            "subnets": [
+                              {
+                                "Ref": "CLUSTERVpcPrivateSubnet1SubnetFE921FB1"
+                              },
+                              {
+                                "Ref": "CLUSTERVpcPrivateSubnet2SubnetA2222ECD"
+                              }
+                            ],
+                            "securityGroups": [
+                              {
+                                "Fn::GetAtt": [
+                                  "MLFLOWServiceSecurityGroup224B1FDD",
+                                  "GroupId"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "serviceName": "mlflow",
+                        "taskDefinition": {
+                          "Ref": "MLflowDDA9BA68"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.CfnService",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "m-lflow/MLFLOW/Service/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "m-lflow/MLFLOW/Service/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "m-lflow/MLFLOW/Service/SecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "securityGroupIngress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "ipProtocol": "tcp",
+                                "fromPort": 5000,
+                                "toPort": 5000,
+                                "description": "Allow inbound for mlflow"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "CLUSTERVpc94F1BA6C"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "m-lflow/MLFLOW/Service/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "TaskCount": {
+                    "id": "TaskCount",
+                    "path": "m-lflow/MLFLOW/Service/TaskCount",
+                    "children": {
+                      "Target": {
+                        "id": "Target",
+                        "path": "m-lflow/MLFLOW/Service/TaskCount/Target",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "m-lflow/MLFLOW/Service/TaskCount/Target/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalableTarget",
+                              "aws:cdk:cloudformation:props": {
+                                "maxCapacity": 2,
+                                "minCapacity": 1,
+                                "resourceId": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "service/",
+                                      {
+                                        "Ref": "CLUSTERCDDEBBE4"
+                                      },
+                                      "/",
+                                      {
+                                        "Fn::GetAtt": [
+                                          "MLFLOWServiceFC39EF8E",
+                                          "Name"
+                                        ]
+                                      }
+                                    ]
+                                  ]
+                                },
+                                "roleArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":iam::",
+                                      {
+                                        "Ref": "AWS::AccountId"
+                                      },
+                                      ":role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+                                    ]
+                                  ]
+                                },
+                                "scalableDimension": "ecs:service:DesiredCount",
+                                "serviceNamespace": "ecs"
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-applicationautoscaling.CfnScalableTarget",
+                              "version": "1.92.0"
+                            }
+                          },
+                          "AUTOSCALING": {
+                            "id": "AUTOSCALING",
+                            "path": "m-lflow/MLFLOW/Service/TaskCount/Target/AUTOSCALING",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "m-lflow/MLFLOW/Service/TaskCount/Target/AUTOSCALING/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyName": "mlflowMLFLOWServiceTaskCountTargetAUTOSCALING59FBFFBE",
+                                    "policyType": "TargetTrackingScaling",
+                                    "scalingTargetId": {
+                                      "Ref": "MLFLOWServiceTaskCountTarget5798B92F"
+                                    },
+                                    "targetTrackingScalingPolicyConfiguration": {
+                                      "predefinedMetricSpecification": {
+                                        "predefinedMetricType": "ECSServiceAverageCPUUtilization"
+                                      },
+                                      "scaleInCooldown": 60,
+                                      "scaleOutCooldown": 60,
+                                      "targetValue": 70
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-applicationautoscaling.CfnScalingPolicy",
+                                  "version": "1.92.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-applicationautoscaling.TargetTrackingScalingPolicy",
+                              "version": "1.92.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-applicationautoscaling.ScalableTarget",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.ScalableTaskCount",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.FargateService",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs-patterns.NetworkLoadBalancedFargateService",
+              "version": "1.92.0"
+            }
+          },
+          "LoadBalancerDNS": {
+            "id": "LoadBalancerDNS",
+            "path": "m-lflow/LoadBalancerDNS",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.92.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "m-lflow/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "m-lflow/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.92.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.92.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.92.0"
+    }
+  }
+}
